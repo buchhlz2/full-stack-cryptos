@@ -1,3 +1,5 @@
+// static, skinnied down schema from CoinMarketCap API endpoint: https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest
+// https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical
 const COINDATA = {
   "data": [{
     "id": 1,
@@ -16,6 +18,16 @@ const COINDATA = {
     "quote": {
       "USD": {
         "price": 138.82
+      }
+    }
+  },
+  {
+    "id": 3,
+    "name": "Ripple",
+    "symbol": "XRP",
+    "quote": {
+      "USD": {
+        "price": 0.31
       }
     }
   }]

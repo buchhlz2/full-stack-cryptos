@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-class CoinRow extends React.Component {
+export default class CoinRow extends React.Component {
   render() {
     const coin = this.props.coin;
-
+    // basic structure for a row -- the coin's name, symbol, price, etc.
     return (
       <tr>
         <td>{coin.name}</td>
@@ -13,5 +13,3 @@ class CoinRow extends React.Component {
     );
   }
 }
-
-export default CoinRow;
