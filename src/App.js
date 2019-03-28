@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import CoinTable from './components/CoinTable';
+import COINDATA from './util/COINDATA';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      coinData: []
+    }
+  }
+
+  componentDidMount() {
+    this.setState({coinData: [...COINDATA.data]})
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className="container">
+        <h1>Coin List</h1>
+        <CoinTable coins={this.state.coinData}/>
       </div>
     );
   }
